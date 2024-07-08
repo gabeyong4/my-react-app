@@ -1,13 +1,21 @@
-.loggedin {
-  background-color: brown;
-  padding: 10px;
+.category-class {
+  background-color: aqua;
+  border: 3px solid black;
   border-radius: 5px;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  margin:0;
 }
 
-.loggedout {
-  background-color: aqua;
-  padding: 10px;
-  border-radius: 5px;
+
+.listItem-class li{
+  list-style: none;
   text-align: center;
+  margin: 0;
+}
+
+.listItem-class li:hover {
+  color: hsla(0, 0%, 0%, 0.194);
+  cursor: pointer;
 }
