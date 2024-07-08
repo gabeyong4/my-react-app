@@ -1,9 +1,13 @@
-.profile {
+.loggedin {
+  background-color: brown;
   padding: 10px;
-  border: 1px solid hsla(0, 0%, 0%, 0.435);
-  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.profile p {
-  margin: 0;
+.loggedout {
+  background-color: aqua;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
 }
