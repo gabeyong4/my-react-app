@@ -1,10 +1,10 @@
-import Counter from './Counter.jsx'
+import MyComponent from './MyComponent.jsx'
 import './App.css'
 
 function App() {
   return (
     <>
-    <Counter/>
+    <MyComponent/>
     </>
   );
 }
