@@ -1,70 +1,26 @@
 import { useState } from "react";
 
 function MyComponent() {
-    const [count, setCount] = useState(0)
-    
-    function increment() {
-        setCount(count+1)
-        setCount(count+1)
-        setCount(count+1)
+    const [car, setCar] = useState({year:2024, make:"Ford", model:"Mustang"})
+
+    function handleYearChange(e) {
+        setCar(c => ({...c, year:e.target.value}))
     }
 
-    function decrement() {
-        setCount(count-1)
-        setCount(count-1)
-        setCount(count-1)
+    function handleMakeChange(e) {
+        setCar(c => ({...c, make:e.target.value}))
     }
 
-    function reset() {
-        setCount(0)
-        setCount(0)
-        setCount(0)
+    function handleModelChange(e) {
+        setCar(c => ({...c, model:e.target.value}))
     }
 
-    function increment() {
-        setCount(c => c+1)
-        setCount(c => c+1)
-        setCount(c => c+1)
-    }
-
-    function decrement() {
-        setCount(c => c-1)
-        setCount(c => c-1)
-        setCount(c => c-1)
-    }
-
-    function reset() {
-        setCount(c=> c=0)
-        setCount(c=> c=0)
-        setCount(c=> c=0)
-    }
-
-    // const handleIncrement = (c) => {
-    //     setCount(count + 2)
-    //     setCount(count + 2)
-    //     setCount(count + 2)
-
-    // }
-
-    // const handleDecrement = (c) => {
-    //     setCount(count - 2)
-    //     setCount(count - 2)
-    //     setCount(count - 2)
-
-    // }
-
-    // const handleReset = (c) => {
-    //     setCount(0)
-    //     setCount(0)
-    //     setCount(0)
-    // }
-    
     return (
-        <div>
-            <p>Count:{count}</p>
-            <button onClick={increment}>Increment</button>
-            <button onClick={decrement}>Decrement</button>
-            <button onClick={reset}>Reset</button>
+        <div className="car-container">
+            <p>Your favourite car is: {car.year} {car.make} {car.model}</p>
+            <input type="number" value={car.year} onChange={handleYearChange}/>
+            <input type="text" value={car.make} onChange={handleMakeChange}/>
+            <input type="text" value={car.model} onChange={handleModelChange}/>
         </div>
     )
 }
